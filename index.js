@@ -5,6 +5,8 @@ const app = express();
 const todoRoutes = require("./routes/todoRoutes");
 let PORT = process.env.PORT || 3030;
 
+app.use(express.json());
+
 mongoose
     .connect(
         "mongodb+srv://YuChing:811204@todolist.yublz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
