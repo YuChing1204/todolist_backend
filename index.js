@@ -1,11 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const app = express();
 const todoRoutes = require("./routes/todoRoutes");
 let PORT = process.env.PORT || 3030;
 
 app.use(express.json());
+app.use(cors());
 
 mongoose
     .connect(
